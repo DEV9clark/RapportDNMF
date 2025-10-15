@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport Mensuel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Rapport Mensuel</h1>
+        <form id="reportForm">
+            <div class="section">
+                <div class="month-year-selector">
+                    <label for="month">Mois :</label>
+                    <select id="month">
+                        <option value="Janvier">Janvier</option>
+                        <option value="Février">Février</option>
+                        <option value="Mars">Mars</option>
+                        <option value="Avril">Avril</option>
+                        <option value="Mai">Mai</option>
+                        <option value="Juin">Juin</option>
+                        <option value="Juillet" selected>Juillet</option>
+                        <option value="Août">Août</option>
+                        <option value="Septembre">Septembre</option>
+                        <option value="Octobre">Octobre</option>
+                        <option value="Novembre">Novembre</option>
+                        <option value="Décembre">Décembre</option>
+                    </select>
+
+                    <label for="year">Année :</label>
+                    <select id="year">
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025" selected>2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                    </select>
+                </div>
+
+                <h2>Division Mission</h2>
+                <h3>Service de l’Expansion de l’Évangile</h3>
+                <label for="pays">Pays :</label>
+                <input type="text" id="pays" list="africanCountries" value="Sénégal">
+                <datalist id="africanCountries">
+                    <option value="Algérie"></option>
+                    <option value="Angola"></option>
+                    <option value="Bénin"></option>
+                    <option value="Botswana"></option>
+                    <option value="Burkina Faso"></option>
+                    <option value="Burundi"></option>
+                    <option value="Cameroun"></option>
+                    <option value="Cap-Vert"></option>
+                    <option value="République centrafricaine"></option>
+                    <option value="Comores"></option>
+                    <option value="Congo (Rép. du)"></option>
+                    <option value="Congo (Rép. dém. du)"></option>
+                    <option value="Côte d'Ivoire"></option>
+                    <option value="Djibouti"></option>
+                    <option value="Égypte"></option>
+                    <option value="Érythrée"></option>
+                    <option value="Éthiopie"></option>
+                    <option value="Gabon"></option>
+                    <option value="Gambie"></option>
+                    <option value="Ghana"></option>
+                    <option value="Guinée"></option>
+                    <option value="Guinée-Bissau"></option>
+                    <option value="Guinée équatoriale"></option>
+                    <option value="Kenya"></option>
+                    <option value="Lesotho"></option>
+                    <option value="Libéria"></option>
+                    <option value="Libye"></option>
+                    <option value="Madagascar"></option>
+                    <option value="Malawi"></option>
+                    <option value="Mali"></option>
+                    <option value="Maroc"></option>
+                    <option value="Maurice"></option>
+                    <option value="Mauritanie"></option>
+                    <option value="Mozambique"></option>
+                    <option value="Namibie"></option>
+                    <option value="Niger"></option>
+                    <option value="Nigéria"></option>
+                    <option value="Ouganda"></option>
+                    <option value="Rwanda"></option>
+                    <option value="Sao Tomé-et-Principe"></option>
+                    <option value="Sénégal"></option>
+                    <option value="Seychelles"></option>
+                    <option value="Sierra Leone"></option>
+                    <option value="Somalie"></option>
+                    <option value="Soudan"></option>
+                    <option value="Soudan du Sud"></option>
+                    <option value="Swaziland"></option>
+                    <option value="Tanzanie"></option>
+                    <option value="Tchad"></option>
+                    <option value="Togo"></option>
+                    <option value="Tunisie"></option>
+                    <option value="Zambie"></option>
+                    <option value="Zimbabwe"></option>
+                </datalist>
+                <label for="districts">Nombre de districts :</label>
+                <input type="number" id="districts" value="0">
+
+                <label for="assemblees">Nombre d'assemblées :</label>
+                <input type="number" id="assemblees" value="0">
+
+                <label for="cellules">Nombre de cellules :</label>
+                <input type="number" id="cellules" value="0">
+
+                <label for="nouvellesZones">Nombre de nouvelles zones :</label>
+                <input type="number" id="nouvellesZones" value="0">
+
+                <label for="membres">Nombre de membres :</label>
+                <input type="number" id="membres" value="0">
+
+                <h3>Séminaires</h3>
+                <label for="seminairesAssemblee">Nombre de séminaires en assemblée :</label>
+                <input type="number" id="seminairesAssemblee" value="0">
+
+                <label for="seminairesHorsAssemblee">Nombre de séminaires hors assemblée :</label>
+                <input type="number" id="seminairesHorsAssemblee" value="0">
+
+                <label for="assistance">Assistance :</label>
+                <input type="number" id="assistance" value="0">
+
+                <label for="invites">Invités :</label>
+                <input type="number" id="invites" value="0">
+
+                <label for="sauves">Sauvés :</label>
+                <input type="number" id="sauves" value="0">
+
+                <label for="temoignages">Témoignages :</label>
+                <input type="number" id="temoignages" value="0">
+
+                <label for="ajoutes">Ajoutés :</label>
+                <input type="number" id="ajoutes" value="0">
+
+                <label for="predicateursMission">Nombre de prédicateurs :</label>
+                <input type="number" id="predicateursMission" value="0">
+
+                <label for="depense">Dépense :</label>
+                <input type="number" id="depense" value="0">
+
+                <label for="notes">Notes :</label>
+                <textarea id="notes">1 Séminaire inachevé</textarea>
+            </div>
+
+            <div class="section">
+                <h3>Service de Programmation du Fichier Mission</h3>
+                <label for="intervenantsSeminaires">Intervenants aux séminaires :</label>
+                <input type="number" id="intervenantsSeminaires" value="0">
+
+                <label for="missionsNationales">Nombre de missions nationales :</label>
+                <input type="number" id="missionsNationales" value="0">
+
+                <label for="missionsInternationales">Nombre de missions internationales :</label>
+                <input type="number" id="missionsInternationales" value="0">
+
+                <label for="predicateursProg">Nombre de prédicateurs :</label>
+                <input type="number" id="predicateursProg" value="0">
+
+                <label for="pasteursProg">Nombre de pasteurs :</label>
+                <input type="number" id="pasteursProg" value="0">
+
+                <label for="missionnairesInternationaux">Missionnaires internationaux :</label>
+                <input type="number" id="missionnairesInternationaux" value="0">
+
+                <label for="missionnairesNationaux">Missionnaires nationaux :</label>
+                <input type="number" id="missionnairesNationaux" value="0">
+            </div>
+
+            <div class="section">
+                <h3>Service de Suivi Spirituel</h3>
+                <label for="pasteursProblemeDoctrinal">Nombre de pasteurs et de prédicateurs ayant un problème doctrinal :</label>
+                <input type="number" id="pasteursProblemeDoctrinal" value="0">
+
+                <label for="freresProblemeDoctrinal">Nombre de frères ayant un problème doctrinal :</label>
+                <input type="number" id="freresProblemeDoctrinal" value="0">
+
+                <label for="problemesDoctrinauxSouleves">Problèmes doctrinaux soulevés :</label>
+                <textarea id="problemesDoctrinauxSouleves"></textarea>
+
+                <label for="approchesSolutions">Approches de solutions :</label>
+                <textarea id="approchesSolutions"></textarea>
+
+                <label for="decisionsFinales">Décisions finales :</label>
+                <textarea id="decisionsFinales"></textarea>
+            </div>
+
+            <div class="section">
+                <h2>Division Formation</h2>
+                <h3>Service de Formation Académique</h3>
+                <label for="ecolesOuvertes">Nombre d'écoles ouvertes :</label>
+                <input type="number" id="ecolesOuvertes" value="0">
+
+                <label for="elevesInscrits">Nombre d’élèves prédicateurs inscrits :</label>
+                <input type="number" id="elevesInscrits" value="0">
+
+                <label for="elevesActuels">Nombre d’élèves prédicateurs actuels :</label>
+                <input type="number" id="elevesActuels" value="0">
+
+                <label for="formateursEcole">Nombre de formateurs d’école :</label>
+                <input type="number" id="formateursEcole" value="0">
+
+                <label for="modulesDonnes">Nombre de modules donnés :</label>
+                <input type="number" id="modulesDonnes" value="0">
+            </div>
+
+            <div class="section">
+                <h3>Service de Formation Classique</h3>
+                <label for="formationsClassiques">Nombre de formations classiques :</label>
+                <input type="number" id="formationsClassiques" value="0">
+
+                <label for="sauvesFormes">Nombre de sauvés formés :</label>
+                <input type="number" id="sauvesFormes" value="0">
+
+                <label for="formateursNationaux">Nombre de formateurs nationaux utilisés :</label>
+                <input type="number" id="formateursNationaux" value="0">
+
+                <label for="formateursInternationaux">Nombre de formateurs internationaux utilisés :</label>
+                <input type="number" id="formateursInternationaux" value="0">
+            </div>
+
+            <div class="section">
+                <h3>Service de Formations Diverses</h3>
+                <label for="formationsDiverses">Nombre de formations diverses dispensées :</label>
+                <input type="number" id="formationsDiverses" value="0">
+            </div>
+
+            <div class="section">
+                <h3>Renforcement des Capacités des Leaders</h3>
+                <label for="renforcementsLeaders">Nombre de renforcements de capacités des leaders :</label>
+                <input type="number" id="renforcementsLeaders" value="0">
+
+                <label for="leadersRenforces">Nombre de leaders renforcés :</label>
+                <input type="number" id="leadersRenforces" value="0">
+            </div>
+
+            <div class="section">
+                <h3>Autres</h3>
+                <label for="hommesFormes">Nombre d'hommes formés :</label>
+                <input type="number" id="hommesFormes" value="0">
+
+                <label for="femmesFormees">Nombre de femmes formées :</label>
+                <input type="number" id="femmesFormees" value="0">
+
+                <label for="jeunesFormes">Nombre de jeunes formés :</label>
+                <input type="number" id="jeunesFormes" value="0">
+            </div>
+
+            <button type="button" id="generatePdf">Générer le PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
